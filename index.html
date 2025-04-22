@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="index.css">
+<title>Soundwave Journal</title>   
+
+</head>
+
+<body>
+
+<article id="articletop">
+    <h2><span>Soundwave</span> Journal</h2>
+</article>
+
+<nav>
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+     </div>
+    <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="artists.html">Artists</a></li>
+        <li><a href="genres.html">Genres</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>  
+
+
+<main>
+
+<div id="section1">
+<article id="article1">
+    <h2>Popular Artists</h2>
+    <p>Discover the most popular artists right now! Explore their most iconic tracks,
+    get fun facts about their careers, and learn what makes them stand out in the music industry.
+    From chart-topping hits to their unique style, dive deep into the world of music’s biggest stars.</p>
+    <a href="artists.html" id="a1">Read more</a>
+</article>
+
+<div id="imgdiv1">
+    <img src="./pic/artists.jpg" alt="artists">
+</div>
+
+<div id="imgarrow">
+    <img src="./pic/arrow.gif" alt="arrow">
+</div>
+</div>
+
+
+<div id="section2">
+<article id="article2">
+    <h2>Genres</h2>
+    <p>Dive into the diverse world of music genres.
+    From upbeat pop and powerful rock to chill lo-fi,
+    jazzy rhythms, and electronic vibes — each genre tells its own story.
+    Learn about their origins, evolution, and what makes them special.
+    Whether you’re exploring something new or sticking with your favorites,
+    there’s always a sound that fits your mood.</p>
+    <a href="genres.html" id="a2">Read more</a>
+</article>
+
+<div id="imgdiv2">
+    <img src="./pic/genres.jpg" alt="genres">
+</div>
+</div>
+
+<div id="section3">
+<article id="article3">
+    <h2>News</h2>
+    <p>Stay updated with the latest in the music world.
+    From new album releases and trending artists to music awards and industry news —
+    this section keeps you in the loop.
+    Discover what’s happening now and what’s coming next in the world of sound.</p>
+    <a href="news.html" id="a3">Read more</a>
+</article>
+
+<div id="imgdiv3">
+    <img src="./pic/news.jpg" alt="news">
+</div>
+</div>
+
+
+</main>
+
+<footer>
+    <p> Contact us: <a href="mailto:soundwavejournal@gmail.com">soundwavejournal@gmail.com</a></p>
+    <div class="social-icons">
+            <a href="#"><img src="./icon/facebook.svg" alt="Facebook"></a>
+            <a href="#"><img src="./icon/instagram.svg" alt="Instagram"></a>
+            <a href="#"><img src="./icon/twitter.svg" alt="Twitter"></a>
+    </div>
+    <p id="dane">
+        Site created by: <strong>Dmytro Stepaniuk</strong><br>
+        &copy; 2025 Soundwave Journal. All rights reserved.
+    </p>
+        <div class="language">
+            <label for="language">Language:</label>
+            <select id="language" onchange="changeLanguage(this.value)">
+            <option value="en">English (US)</option>
+            <option value="uk">Українська</option>
+            <option value="pl">Polski</option>
+            </select>
+        </div>
+</footer>
+
+
+<script>
+    function changeLanguage(lang) {
+      if (lang === "en") window.location.href = "index.html";
+      if (lang === "uk") window.location.href = "index_uk.html";
+      if (lang === "pl") window.location.href = "index_pl.html";
+    }
+</script>
+
+<script>
+    function toggleMenu() {
+     const menu = document.querySelector('.nav-list');
+     menu.classList.toggle('active');
+ }
+</script>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+<article id="articletop">
+    <h2><span>Soundwave</span> Journal</h2>
+</article>
+        
+<nav>
+  <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+   </div>
+  <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="artists.html">Artists</a></li>
+      <li><a href="genres.html">Genres</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav> 
+
+<main>
+
+<div id="describe">
+  <h1>Зв'язатися з нами</h1>
+</div>
+
+<hr>
+
+<div class="contact-section">
+    <h2>Ми раді зворотному зв’язку!</h2>
+    <p>Якщо у вас є запитання, пропозиції або ви просто хочете привітатись — не соромтесь написати нам через форму нижче.</p>
+
+    <form class="contact-form" action="https://formspree.io/f/mwpoeqvn"
+    method="POST">
+      <label for="name">Ваше ім’я:</label>
+      <input type="text" id="name" name="name">
+
+      <label for="email">Ваша електронна пошта:</label>
+      <input type="email" id="email" name="email">
+
+      <label for="message">Ваше повідомлення:</label>
+      <textarea id="message" name="message" rows="5"></textarea>
+
+      <button type="submit">Надіслати</button>
+    </form>
+</div>
+
+
+<footer>
+
+    <p> Зв'язатися з нами: <a href="mailto:soundwavejournal@gmail.com">soundwavejournal@gmail.com</a></p>
+    <div class="social-icons">
+        <a href="#"><img src="./icon/facebook.svg" alt="Facebook"></a>
+        <a href="#"><img src="./icon/instagram.svg" alt="Instagram"></a>
+        <a href="#"><img src="./icon/twitter.svg" alt="Twitter"></a>
+    </div>
+    
+    <p id="dane">
+        Сайт створений: <strong>Дмитро Степанюк</strong><br>
+        &copy; 2025 Soundwave Journal. Усі права захищено.
+    </p>
+    
+    <div class="language">
+        <label for="language">Мова:</label>
+        <select id="language" onchange="changeLanguage(this.value)">
+        <option value="uk">Українська</option>
+        <option value="en">English (US)</option>
+        <option value="pl">Polski</option>
+        </select>
+    </div>
+    
+    </footer>
+
+</main>
+
+<script>
+  function changeLanguage(lang) {
+    if (lang === "uk") window.location.href = "contact_uk.html";
+    if (lang === "en") window.location.href = "contact.html";
+    if (lang === "pl") window.location.href = "contact_pl.html";
+  }
+</script>
+
+<script>
+  function toggleMenu() {
+   const menu = document.querySelector('.nav-list');
+   menu.classList.toggle('active');
+}
+</script>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

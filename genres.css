@@ -1,0 +1,291 @@
+body, html {
+    font-family: 'Poppins',
+    sans-serif;
+    margin: 0;
+    height: auto;
+    width: 100%;
+}
+
+main {
+    height: auto;
+    width: 100%;
+    background-color: #5d4574;
+}
+
+#describe  {
+    max-width: 900px; 
+    text-align: center;
+    color: white;
+    margin: auto;
+    padding-top: 100px;
+}
+
+#describe h1 {
+    font-size: 80px;
+    margin-bottom: 10px;
+}
+
+#describe p {
+    font-size: 25px;
+    line-height: 1.5;
+    color: #ccc;
+}
+
+#details { 
+    margin: 0;
+    margin-top: 80px;
+}
+
+
+
+  
+.genre-card {
+    background-color: #000015;
+    border: 1px solid #5e2e91;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+    border-radius: 12px;
+    padding: 40px;
+    margin: 20px 20px;
+    max-width: 600px;
+    text-align: justify;
+
+}
+
+  
+  .genre-card:hover {
+    transform: scale(1.03);
+    background-color: #3d0055;
+  }
+  
+  .genre-card summary {
+    color: #fff;
+    font-size: 24px;
+  }
+  
+  .genre-card p {
+    font-size: 16px;
+    color: #d6d6d6;
+  }
+
+  nav {
+    width: 40%;
+    height: 12%;
+    background-color: #000015;
+    align-content: center;
+    position: fixed;
+    z-index: 1000;
+    left: 60%;
+}
+
+#articletop {
+    width: 60%;
+    height: 12%;
+    background-color: #000015;
+    align-content: center;
+    text-align: center;
+    color: white;
+    position: fixed;
+    z-index: 1000;
+
+
+}
+
+#articletop h2 {
+    margin: 0;
+    font-size: 2vw;
+}
+
+#articletop span {
+    color:  #5d4574;
+    max-height: 12%;
+    max-width: 1%;
+}
+
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 0.3vw 1vw;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+
+}
+
+
+nav a:hover {
+    color: #A06DAD;
+    transform: scale(1.1);
+        
+}
+
+
+nav a.active {
+    color: #A06DAD; /* Світло-фіолетовий */
+    font-weight: 700; /* Жирний текст */
+    text-decoration: underline; /* Підкреслення */
+    transition: all 0.3s ease-in-out;
+}
+
+
+    /* Стилі для гамбургер-меню */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    right: 30px; /* Розмістити гамбургер з правого боку */
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+    /* Навігаційний список */
+.nav-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+/* Стилі для пунктів меню */
+.nav-list li {
+    margin-right: 20px;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.3vw;
+}
+
+/* Адаптивне меню */
+@media (max-width: 1148px) {
+    .nav-list {
+        display: none; /* Сховати навігацію на малих екранах */
+         width: 100%;
+        height: 100%; /* Зробити меню на весь екран */
+        position: fixed; /* Позиціонування меню поверх контенту */
+        top: 0; /* Задаємо верхнє відступлення */
+        left: 0; /* Позиціонування від лівого краю */
+        background-color: rgba(0, 0, 0, 0.7); /* Напівпрозорий фон */
+        text-align: center;
+        padding: 60px 0; /* Відступи, щоб меню було по центру */
+        box-sizing: border-box;
+        z-index: 1000; /* Забезпечити, щоб меню було зверху */
+        transition: opacity 0.3s ease-in-out; /* Плавне з'явлення меню */
+}
+
+.nav-list.active {
+    display: block; /* Показати меню, коли воно активне */
+    opacity: 1; /* Відображення меню */
+}
+
+.menu-toggle {
+    display: flex; /* Показати гамбургер-іконку */
+}
+
+.nav-list li {
+     margin-bottom: 15px; /* Додати відступ між пунктами меню */
+}
+}
+
+/* Додати ефект при наведенні на пункти меню */
+.nav-list li a:hover {
+    color: #A06DAD; /* Можна вибрати будь-який колір для підсвічування */
+}
+
+#article1, #article2 {
+    width: 50%;
+    font-style: italic;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 30px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+    font-size: 2.2vw;
+    align-content: center;
+    text-align: justify;
+    float: right;
+    margin-right: 1%;
+    margin-top: 80px;
+
+}
+
+#article1 p {
+    font-size: 25px;
+    line-height: 1.5;
+    color: #ccc;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#article1 h2 {
+    font-size: 35px;
+    color: white;
+    text-align: center;
+}
+
+#article2 {
+    margin-top: 20px;
+
+}
+
+#article2 p {
+    font-size: 25px;
+    line-height: 1.5;
+    color: #ccc;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#article2 h2 {
+    font-size: 35px;
+    color: white;
+    text-align: center;
+}
+
+
+footer {
+    display: flex;
+    background-color: #2f2f2f;
+    color: #aaa;
+    padding: 20px 0 20px 0;
+    margin-top: 40px;
+    clear: both;
+}
+
+footer a:hover {
+ text-decoration: underline;
+}
+
+footer .social-icons img:hover {
+ transform: scale(1.2);
+}
+
+footer .language {
+    margin-top: 15px;
+
+}
+
+footer label {
+    margin-left: 80px;
+}
+
+footer select {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+footer a {
+    padding: 12px;
+}
+
+footer div a:first-child, #dane, #social-icons,footer p {
+    padding-left: 80px;
+}

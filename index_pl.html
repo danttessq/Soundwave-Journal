@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="index.css">
+<title>Soundwave Journal</title>   
+
+</head>
+
+<body>
+
+<article id="articletop">
+    <h2><span>Soundwave</span> Journal</h2>
+</article>
+
+<nav>
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+     </div>
+    <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="artists.html">Artists</a></li>
+        <li><a href="genres.html">Genres</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>  
+
+
+<main>
+
+<div id="section1">
+    <article id="article1">
+        <h2>Popularni artyści</h2>
+        <p>Odkryj najbardziej popularnych artystów obecnie! Poznaj ich najbardziej ikoniczne utwory,
+        dowiedz się ciekawych faktów o ich karierach i zobacz, co sprawia, że wyróżniają się w przemyśle muzycznym.
+        Od hitów na szczycie list przebojów po ich unikalny styl — zanurz się w świecie największych gwiazd muzyki.</p>
+        <a href="artists.html" id="a1">Przeczytaj więcej</a>
+    </article>
+    
+
+<div id="imgdiv1">
+    <img src="./pic/artists.jpg" alt="artists">
+</div>
+
+<div id="imgarrow">
+    <img src="./pic/arrow.gif" alt="arrow">
+</div>
+</div>
+
+
+<div id="section2">
+    <article id="article2">
+        <h2>Gatunki</h2>
+        <p>Zanurz się w różnorodnym świecie gatunków muzycznych.
+        Od radosnej popu i energetycznego rocka po relaksujący lo-fi,
+        jazzowe rytmy i elektroniczne brzmienia — każdy gatunek opowiada swoją historię.
+        Dowiedz się o ich pochodzeniu, ewolucji i tym, co sprawia, że są wyjątkowe.
+        Niezależnie od tego, czy odkrywasz coś nowego, czy trzymasz się swoich ulubionych,
+        zawsze znajdziesz dźwięk, który pasuje do twojego nastroju.</p>
+        <a href="genres.html" id="a2">Przeczytaj więcej</a>
+    </article>
+    
+
+<div id="imgdiv2">
+    <img src="./pic/genres.jpg" alt="genres">
+</div>
+</div>
+
+<div id="section3">
+    <article id="article3">
+        <h2>Wiadomości</h2>
+        <p>Bądź na bieżąco z najnowszymi wydarzeniami ze świata muzyki.
+        Od nowych albumów i popularnych artystów po nagrody muzyczne i wiadomości z branży —
+        ta sekcja trzyma Cię w temacie.
+        Odkryj, co się dzieje teraz i co nas czeka w świecie dźwięku.</p>
+        <a href="news.html" id="a3">Przeczytaj więcej</a>
+    </article>
+    
+
+<div id="imgdiv3">
+    <img src="./pic/news.jpg" alt="news">
+</div>
+</div>
+
+
+</main>
+
+<footer>
+
+    <p> Kontakt: <a href="mailto:soundwavejournal@gmail.com">soundwavejournal@gmail.com</a></p>
+    <div class="social-icons">
+        <a href="#"><img src="./icon/facebook.svg" alt="Facebook"></a>
+        <a href="#"><img src="./icon/instagram.svg" alt="Instagram"></a>
+        <a href="#"><img src="./icon/twitter.svg" alt="Twitter"></a>
+    </div>
+    
+    <p id="dane">
+        Strona stworzona przez: <strong>Dmytro Stepaniuk</strong><br>
+        &copy; 2025 Soundwave Journal. Wszelkie prawa zastrzeżone.
+    </p>
+    
+    <div class="language">
+        <label for="language">Język:</label>
+        <select id="language" onchange="changeLanguage(this.value)">
+        <option value="pl">Polski</option>
+        <option value="en">English (US)</option>
+        <option value="uk">Українська</option>
+        </select>
+    </div>
+    
+    </footer>
+
+
+<script>
+    function changeLanguage(lang) {
+    if (lang === "pl") window.location.href = "index_pl.html";
+    if (lang === "en") window.location.href = "index.html";
+    if (lang === "uk") window.location.href = "index_uk.html";
+    }
+</script>
+
+<script>
+    function toggleMenu() {
+     const menu = document.querySelector('.nav-list');
+     menu.classList.toggle('active');
+ }
+</script>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soundwave Journal</title>
+  <link rel="stylesheet" href="contact.css">
+
+</head>
+
+<body>
+
+<article id="articletop">
+    <h2><span>Soundwave</span> Journal</h2>
+</article>
+        
+<nav>
+  <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+   </div>
+  <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="artists.html">Artists</a></li>
+      <li><a href="genres.html">Genres</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav> 
+
+<main>
+
+    <div id="describe">
+        <h1>Skontaktuj się z nami</h1>
+      </div>
+      
+
+<hr>
+
+<div class="contact-section">
+    <h2>Chcielibyśmy usłyszeć od Ciebie!</h2>
+    <p>Jeśli masz pytania, sugestie lub po prostu chcesz się przywitać — skontaktuj się z nami, korzystając z formularza poniżej.</p>
+
+    <form class="contact-form" action="https://formspree.io/f/mwpoeqvn"
+    method="POST">
+      <label for="name">Twoje imię:</label>
+      <input type="text" id="name" name="name">
+
+      <label for="email">Twój adres e-mail:</label>
+      <input type="email" id="email" name="email">
+
+      <label for="message">Twoja wiadomość:</label>
+      <textarea id="message" name="message" rows="5"></textarea>
+
+      <button type="submit">Wyślij</button>
+    </form>
+</div>
+
+<footer>
+
+    <p> Kontakt: <a href="mailto:soundwavejournal@gmail.com">soundwavejournal@gmail.com</a></p>
+    <div class="social-icons">
+        <a href="#"><img src="./icon/facebook.svg" alt="Facebook"></a>
+        <a href="#"><img src="./icon/instagram.svg" alt="Instagram"></a>
+        <a href="#"><img src="./icon/twitter.svg" alt="Twitter"></a>
+    </div>
+    
+    <p id="dane">
+        Strona stworzona przez: <strong>Dmytro Stepaniuk</strong><br>
+        &copy; 2025 Soundwave Journal. Wszelkie prawa zastrzeżone.
+    </p>
+    
+    <div class="language">
+        <label for="language">Język:</label>
+        <select id="language" onchange="changeLanguage(this.value)">
+        <option value="pl">Polski</option>
+        <option value="en">English (US)</option>
+        <option value="uk">Українська</option>
+        </select>
+    </div>
+    
+    </footer>
+
+</main>
+
+<script>
+  function changeLanguage(lang) {
+    if (lang === "pl") window.location.href = "contact_pl.html";
+    if (lang === "en") window.location.href = "contact.html";
+    if (lang === "uk") window.location.href = "contact_uk.html";
+  }
+</script>
+
+<script>
+  function toggleMenu() {
+   const menu = document.querySelector('.nav-list');
+   menu.classList.toggle('active');
+}
+</script>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
